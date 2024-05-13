@@ -8,7 +8,14 @@ setup() {
     sudo installer -pkg AWSCLIV2.pkg -target /
 
     #Login
-
+    aws sso login --profile studying
 }
 
+
+list_all_buckets() {
+    aws s3 ls
+}
+
+
 setup
+list_all_buckets
